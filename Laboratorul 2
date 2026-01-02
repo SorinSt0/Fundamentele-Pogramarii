@@ -1,0 +1,493 @@
+/*1)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n=Convert.ToInt32(Console.ReadLine());
+int nrPare = 0;
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i+1} numar:");
+    int num=Convert.ToInt32(Console.ReadLine());
+    if (num % 2 == 0)
+    {
+        nrPare++;
+    }
+}
+Console.WriteLine($"In totoal aveti {nrPare} numere pare in acest sir");*/
+
+/*2)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n=Convert.ToInt32(Console.ReadLine());
+int nrPoz = 0;
+int nrNeg = 0;
+int nrNul = 0;
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i+1} numar:");
+    int num=Convert.ToInt32(Console.ReadLine());
+    if (num> 0)
+    {
+        nrPoz++;
+    }
+    else if (num==0)
+    {
+        nrNul++;
+    }
+    else
+    {
+        nrNeg++;
+    }
+}
+Console.WriteLine($"In totoal aveti {nrPoz} numere pozitive, {nrNeg} numere negative si {nrNul} numeree nule");*/
+
+/*3)
+Console.WriteLine("Intorduceti numarul petru a calcula suma si produsul de la 1 pana la el:");
+int n = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+int prod = 1;
+for (int i = 1; i <= n; i++)
+{
+    sum = sum + i;
+    prod= prod*i;
+}
+Console.WriteLine($"Suma numerleror de la 1 la {n} este {sum} iar produsul este {prod}");
+*/
+
+/*4)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Ce numar doiri sa vedem pe ce pozitie se afla:");
+int nrCaut=Convert.ToInt32(Console.ReadLine());
+int poz = -1;
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i + 1} numar:");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (num==nrCaut)
+    {
+        poz=i;
+    }
+}
+if (poz > -1)
+{
+    Console.WriteLine($"Numarul cautat se afla pe pozitia {poz}");
+}
+else
+{
+    Console.WriteLine(poz);
+}*/
+
+
+/*5)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n = Convert.ToInt32(Console.ReadLine());
+int nrEgalPoz= 0;
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i + 1} numar:");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (num==i)
+    {
+        nrEgalPoz++;
+    }
+}
+Console.WriteLine($"In totoal sunt {nrEgalPoz} nr egale cu pozitia pe care sunt");*/
+
+
+/*6)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n = Convert.ToInt32(Console.ReadLine());
+bool cresc=true;
+int nrpoz = 0;
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i + 1} numar:");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (nrpoz>num)
+    {
+        cresc=false;
+    }
+    nrpoz = num;
+}
+if (cresc == true)
+{
+    Console.WriteLine("Numerel din secvemta sunt in oriden crescatoare");
+}
+else
+{
+    Console.WriteLine("Nmerele din secventa nu sunt in ordine crescatoare");
+}*/
+
+/*7)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n = Convert.ToInt32(Console.ReadLine());
+int nrMax = 0;
+int nrMin = 0;
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i + 1} numar:");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (nrMin==0&&nrMax==0)
+    {
+        nrMax = num;
+        nrMin = num;
+    }
+    else if (num > nrMax)
+    {
+        nrMax = num;
+    }
+    else if (num < nrMin)
+    {
+        nrMin = num;
+    }
+}
+Console.WriteLine($"Din sirul scris de tine cel mai mic numar este {nrMin} si cel mai mare este {nrMax}");*/
+
+/*8)
+Console.WriteLine("Al catulea numar din sirul lui Fibonacci vrei sa il aflii?");
+int n=Convert.ToInt32(Console.ReadLine());
+
+if (n == 1)
+{
+    Console.WriteLine("Primul termen din sirul lui fiboanci este 0");
+}
+else if (n==2)
+{
+    Console.WriteLine("Al doilea termen din sirul lui fibonaci este 1");
+}
+else
+{
+    int f1 = 0;
+    int f2 = 1;
+    int fn = 0;
+    for (int i = 3; i <= n; i++)
+    {
+        fn = f1 + f2;
+        f1 = f2;
+        f2 = fn;
+    }
+    Console.WriteLine($"Al {n} termen din sirul lui fibonaci este {fn}");
+}
+*/
+
+/*9)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Introduceti 1 numar:");
+int z = Convert.ToInt32(Console.ReadLine());
+int refer = z;
+int moncresc = 0;
+int mondedsc = 0;
+for (int i = 1; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i + 1} numar:");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (refer>num)
+    {
+        mondedsc++;
+    }
+    else if (refer < num)
+    {
+        moncresc++;
+    }
+        refer = num;
+}
+if (mondedsc == (n - 1))
+{
+    Console.WriteLine("Sirul dat este monoton descrescator");
+}
+else if (moncresc == (n - 1))
+{
+    Console.WriteLine("Sirul este monoton crescator");
+}
+else
+{
+    Console.WriteLine("Sirul dat nu este nici monoton creascator si nici monoton descrescator");
+}*/
+
+/*10)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n = Convert.ToInt32(Console.ReadLine());
+int nrConsecTotal = 0;
+int grupCurent = 1;
+Console.WriteLine("Introduceti 1 numar:");
+int z = Convert.ToInt32(Console.ReadLine());
+int refer = z;
+for (int i = 1; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i + 1} numar:");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (refer==num-1)
+    {
+        nrConsecTotal++;
+    }
+    else
+    { 
+        if (grupCurent > 1)
+        {
+            nrConsecTotal += grupCurent;
+        }
+        grupCurent = 1;
+    }
+    refer = num;
+}
+if (grupCurent > 1)
+{
+    nrConsecTotal += grupCurent;
+}
+Console.WriteLine($"{nrConsecTotal} este numarul maxim de numerer consecutive");*/
+
+/*11)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n = Convert.ToInt32(Console.ReadLine());
+double sum = 0;
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i + 1} numar:");
+    int num = Convert.ToInt32(Console.ReadLine());
+    sum=sum+(1.0/num);
+}
+Console.WriteLine($"Suma numerelor din sirul dat inverse este {sum} ");*/
+
+/*12)
+Console.WriteLine("Cate numere doriti sa introdudedti?");
+int n = Convert.ToInt32(Console.ReadLine());
+int grZero = 0;
+bool grup = false;
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Introduceti {i + 1} numar:");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (num !=0)
+    {
+        grup = true;
+    }
+    else
+    {
+        if (grup)
+        {
+            grZero++;
+            grup = false;
+        }
+    }
+}
+if (grup)
+{
+    grZero++;
+}
+Console.WriteLine($"In total sunt {grZero}");*/
+
+/*13)
+Console.WriteLine("Câte numere are secvența?");
+int n = Convert.ToInt32(Console.ReadLine());
+
+if (n <= 2)
+{
+    Console.WriteLine("Este secvență crescătoare rotită.");
+    return;
+}
+
+int caderi = 0;
+Console.WriteLine("Introduceți primul număr:");
+int primul = Convert.ToInt32(Console.ReadLine());
+int anterior = primul;
+
+for (int i = 1; i < n; i++)
+{
+    Console.WriteLine($"Introduceți numărul {i + 1}:");
+    int curent = Convert.ToInt32(Console.ReadLine());
+
+    if (curent < anterior)
+    {
+        caderi++;
+    }
+    anterior = curent;
+}
+if (primul < anterior)
+{
+}
+else if (primul > anterior)
+{
+    caderi++;
+}
+if (caderi <= 1)
+{
+    Console.WriteLine("DA, este o secvență crescătoare rotită.");
+}
+else
+{
+    Console.WriteLine("NU, are prea multe întreruperi de ordine.");
+}*/
+
+/*14)
+Console.Write("n = ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+if (n <= 2)
+{
+    Console.WriteLine("DA");
+    return;
+}
+
+int caderi = 0;
+int urcari = 0;
+
+Console.Write("Numărul 1: ");
+int primul = Convert.ToInt32(Console.ReadLine());
+int anterior = primul;
+
+for (int i = 2; i <= n; i++)
+{
+    Console.Write($"Numărul {i}: ");
+    int curent = Convert.ToInt32(Console.ReadLine());
+
+    if (curent < anterior) caderi++;
+    if (curent > anterior) urcari++;
+
+    anterior = curent;
+}
+
+if (primul < anterior) caderi++;
+if (primul > anterior) urcari++;
+
+if (caderi <= 1 || urcari <= 1)
+{
+    Console.WriteLine("DA");
+}
+else
+{
+    Console.WriteLine("NU");
+}*/
+
+/*15)
+Console.Write("n = ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+if (n < 3)
+{
+    Console.WriteLine("NU");
+    return;
+}
+
+Console.Write("Numărul 1: ");
+int anterior = Convert.ToInt32(Console.ReadLine());
+bool aInceputSaScada = false;
+bool esteBitonica = true;
+
+for (int i = 2; i <= n; i++)
+{
+    Console.Write($"Numărul {i}: ");
+    int curent = Convert.ToInt32(Console.ReadLine());
+
+    if (curent > anterior)
+    {
+        if (aInceputSaScada)
+        {
+            esteBitonica = false;
+        }
+    }
+    else if (curent < anterior)
+    {
+        aInceputSaScada = true;
+    }
+
+    anterior = curent;
+}
+if (esteBitonica && aInceputSaScada)
+{
+    Console.WriteLine("DA");
+}
+else
+{
+    Console.WriteLine("NU");
+}*/
+
+/*16)
+Console.Write("n = ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+if (n < 3)
+{
+    Console.WriteLine("DA");
+    return;
+}
+
+Console.Write("Numărul 1: ");
+int primul = Convert.ToInt32(Console.ReadLine());
+int anterior = primul;
+
+int schimbariDirectie = 0;
+int directieAnterioara = 0;
+
+for (int i = 2; i <= n; i++)
+{
+    Console.Write($"Numărul {i}: ");
+    int curent = Convert.ToInt32(Console.ReadLine());
+
+    int directieCurenta = 0;
+    if (curent > anterior) directieCurenta = 1;
+    else if (curent < anterior) directieCurenta = -1;
+
+    if (directieCurenta != 0 && directieAnterioara != 0 && directieCurenta != directieAnterioara)
+    {
+        schimbariDirectie++;
+    }
+
+    if (directieCurenta != 0) directieAnterioara = directieCurenta;
+    anterior = curent;
+}
+int directieFinala = 0;
+if (primul > anterior) directieFinala = 1;
+else if (primul < anterior) directieFinala = -1;
+
+if (directieFinala != 0 && directieAnterioara != 0 && directieFinala != directieAnterioara)
+{
+    schimbariDirectie++;
+}
+
+if (schimbariDirectie == 2)
+{
+    Console.WriteLine("DA");
+}
+else
+{
+    Console.WriteLine(schimbariDirectie == 0 ? "DA" : "NU");
+}*/
+
+/*17)
+Console.WriteLine("Cate cifre sa iba secventa ta formata doar din 0 (paranteze deschisa '(') si 1 (paranteza inchisa ')')?");
+int n=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Scrie 1 nr:");
+int prim=Convert.ToInt32(Console.ReadLine());
+int max = 0;
+int nivel = 0;
+if (prim == 0)
+{
+    nivel++;
+}
+else if (prim == 1)
+{
+}
+else
+{
+    Console.WriteLine("Din pacte nu ai inrodus 0 sau 1 dar alta cifrfa");
+    return;
+}
+for (int i = 2; i <= n; i++)
+{
+    Console.WriteLine($"Introducei {i} numar");
+    int num=Convert.ToInt32(Console.ReadLine());
+    if (num == 0)
+    {
+        nivel++;
+        if (nivel > max) max = nivel;
+    }
+    else if (num == 1)
+    {
+        nivel--;
+    }
+    else
+    {
+        Console.WriteLine("Din pacate nr introdus de tine nu este nici 1 si nici 0 deci te rugam s ail mai introduci inca o data");
+        i--;
+    }
+}
+Console.WriteLine($"Cel mai mare nivel de incubare este: {max} ");*/
