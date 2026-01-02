@@ -1,0 +1,1539 @@
+/*1)
+Console.WriteLine("Cate numere doriti sa introduceti?");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] sirnum = new int[n];
+int suma = 0;
+Console.WriteLine("Introduceti numerele: ");
+for (int i = 0; i < n; i++)
+{
+    sirnum[i] = Convert.ToInt32(Console.ReadLine());
+}
+for (int i = 0;i < n; i++)
+{
+    suma += sirnum[i];
+}
+
+Console.WriteLine($"Suma numerelor introduse de la tastaatura este {suma}");*/
+
+
+/*2)
+Console.WriteLine("Cate numere doriti sa introduceti?");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] sirnum = new int[n];
+for (int i = 0; i < n; i++)
+{
+    sirnum[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+Console.WriteLine("Dati o valoare k sa vedem daca exista in sir ");
+int k=Convert.ToInt32(Console.ReadLine());
+bool kgasit=false;
+for (int i = 0;i < n; i++)
+{
+    if (k == sirnum[i])
+    {
+        Console.WriteLine($"Cifra {k} apare pe pozitia {i}");
+        kgasit = true;
+        break;
+    }
+}
+if (!kgasit)
+{
+    Console.WriteLine("-1");
+}*/
+
+
+/*3)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n =Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[]z = new int[n];
+for (int i=0; i<z.Length; i++)
+{
+    z[i]=Convert.ToInt32(Console.ReadLine());
+}
+
+int valmin = z[0];
+int valmax = z[0];
+int minpoz = 0;
+int maxpoz = 0;
+
+for (int i = 0; i < z.Length; i++)
+{
+    if (z[i] < valmin)
+    {
+        valmin=z[i];    
+        minpoz = i;
+    }
+    else if (z[i] > valmax)
+    {
+        valmax=z[i];
+        maxpoz = i;
+    }
+}
+Console.WriteLine($"Valoarea minima este {valmin} la pozitia {minpoz}");
+Console.WriteLine($"Valoarea maxima este {valmax} la pozitia {maxpoz}");*/
+
+
+/*4)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[] z = new int[n];
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Convert.ToInt32(Console.ReadLine());
+}
+int min = z[0];
+int max = z[0];
+int orimin = 1;
+int orimax = 1;
+
+for (int i = 1; i < z.Length; i++)
+{
+    if (z[i] < min)
+    {
+        min = z[i];
+        orimin = 1;
+    }
+    else if (z[i] == min)
+    {
+        orimin++;
+    }
+    else if (z[i] > max)
+    {
+        max = z[i];
+        orimax = 1;
+    }
+    else if (z[i] == max)
+    {
+        orimax++;
+    }
+}
+Console.WriteLine($"Numarul cel mai mic este {min} si se repeta de {orimin} ori.");
+Console.WriteLine($"Numarul cel mai mare este {max} si se repeta de {orimax} ori.");*/
+
+
+/*5)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+string[] z = new string[n];
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Console.ReadLine();
+}
+Console.WriteLine("Pe ce poziti deresti sa se insereze valoarea e in vector?");
+int k=Convert.ToInt32(Console.ReadLine());
+string valoare = "e";
+
+string[] vectnou = new string[n + 1];
+
+for (int i = 0; i < k; i++)
+{
+    vectnou[i] = z[i];
+}
+vectnou[k] = valoare;
+for (int i=k;i<n;i++)
+{
+    vectnou[i + 1] = z[i];
+}
+
+for (int i = 0; i < vectnou.Length; i++)
+{
+    Console.WriteLine(vectnou[i]);
+}*/
+
+
+/*6)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+string[] z = new string[n];
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Console.ReadLine();
+}
+Console.WriteLine("De pe ce pozitie vrei sa se stearga vecotrul?(Avand in vedere ca poztia se incepe de la 1 nu de la 0)");
+int k=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("");
+string[] vectnou = new string[n - 1];
+for (int i = 0; i < k; i++)
+{
+    vectnou[i] = z[i];
+}
+for (int i = k; i < n; i++)
+{
+    vectnou[i - 1] = z[i];
+}
+for (int i = 0; i < vectnou.Length; i++)
+{
+    Console.WriteLine(vectnou[i]);
+}*/
+
+
+/*7)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+string[] z = new string[n];
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Console.ReadLine();
+}
+string[] vectnou = new string[n];
+for (int i = 0;i < vectnou.Length; i++)
+{
+    vectnou[i] = z[n - 1 - i];
+}
+Console.WriteLine("Vectorul inversat este:");
+for (int i = 0; i < vectnou.Length; i++)
+{
+    Console.WriteLine(vectnou[i]);
+}*/
+
+
+/*8)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+string[] z = new string[n];
+
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Console.ReadLine();
+}
+string val = z[0];
+for (int i = 0;i < z.Length-1; i++)
+{
+    z[i]=z[i+1];
+}
+z[n-1]=val;
+Console.WriteLine("VEctorul este:");
+for (int i = 0; i < z.Length; i++)
+{
+    Console.WriteLine(z[i]);
+}*/
+
+
+/*9)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+string[] z = new string[n];
+
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Console.ReadLine();
+}
+Console.WriteLine("Cate pozitii al vectorului vrei sa se mute in spate?");
+int k=Convert.ToInt32(Console.ReadLine());
+string[] vectnou= new string[n];
+int index = 0;
+if (k<n){
+for (int i = k; i<n; i++)
+{
+    vectnou[index] = z[i];
+    index++;
+}
+for (int i = 0; i < k; i++)
+{
+    vectnou[index] = z[i];
+    index++;
+}
+
+Console.WriteLine();
+for (int i = 0; i < vectnou.Length; i++)
+{
+    Console.WriteLine(vectnou[i]);
+}}
+else 
+{
+    Console.WriteLine("Nu exista asemenea pozitie");
+}*/
+
+
+/*10)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+string[] z = new string[n];
+
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Console.ReadLine();
+}
+Console.WriteLine("Ce elemnt vrei sa cautam in indice?");
+string elemnt=Console.ReadLine();
+int inceput = 0;
+int sfarsi = n - 1;
+int mijlocul=(sfarsi+inceput)/2;
+if (z[mijlocul] == elemnt)
+{
+    Console.WriteLine($"Am gasit elemntul si se afla in vector pe pozitia {mijlocul-1}");
+}
+else if (z[mijlocul] < elemnt)
+{
+    if (int i = 0;i < mijlocul; i++){
+        z[i] == k;
+        r
+    }
+}*/
+
+
+/*11)
+Console.WriteLine("Dati un numar natural");
+int n =Convert.ToInt32(Console.ReadLine());
+for (int i = 0; i*i <= n; i++)
+{
+    if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i * i <= n)
+    {
+        Console.WriteLine(i);
+    }
+}*/
+
+
+/*12)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[] z = new int[n];
+
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+for (int i=0; i<z.Length;i++)
+{
+    int pozmin = i;
+    for (int j = i+1; j < z.Length; j++)
+    {
+        if (z[j] < z[pozmin])
+        {
+            pozmin = j;
+        }
+    }
+    int poz = z[i];
+    z[i] = z[pozmin];
+    z[pozmin] = poz;
+}
+Console.WriteLine();
+for (int i=0; i<z.Length;i++)
+{
+    Console.WriteLine(z[i]);
+}*/
+
+
+/*13)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[] z = new int[n];
+
+for (int i = 0; i < z.Length; i++)
+{
+   z[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+for (int i=1; i < z.Length; i++)
+{
+    int elemntkeie=z[i];
+    int j = i - 1;
+    while (j >= 0 && z[j] > elemntkeie)
+    {
+        z[j + 1] = z[j];   
+        j--;
+        
+    }
+    z[j+1] = elemntkeie;
+
+}
+Console.WriteLine();
+for (int i=0;i<z.Length;i++)
+{
+    Console.WriteLine(z[i]);
+}*/
+
+
+/*14)
+Console.WriteLine("Cate elemnte vrei sa aiba vecotrul?");
+int n =Convert.ToInt32(Console.ReadLine());
+
+int[] z = new int[n];
+for (int i = 0; i < n; i++)
+{
+    z[i]=Convert.ToInt32(Console.ReadLine());
+}
+
+int val = 0;
+
+for (int i = 0;i < n; i++)
+{
+    if (z[i] != 0)
+    {
+        int k = z[val];
+        z[val] = z[i];
+        z[i] = k;
+        val++;
+    }
+}
+
+Console.WriteLine("Acesta este sirul aranjat");
+
+foreach (int x in z) 
+Console.WriteLine(x);*/
+
+
+/*15)
+Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[] z = new int[n];
+int nNou = n;
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+for (int i = 0;i < z.Length; i++)
+{
+    for (int j = 1; j < z.Length-1; j++)
+    {
+        if (z[i] == z[j])
+        {
+            for (int k = j; k < nNou - 1; k++)
+            {
+                z[k] = z[k + 1];
+            }
+
+            nNou--;
+            j--;
+        }
+        
+    }
+}
+Console.WriteLine();
+for (int i = 0; i < z.Length; i++)
+{
+    Console.WriteLine(z[i]);
+}*/
+
+
+/*16)
+Console.WriteLine("Cate elemnte sa aiba vectorul");
+int n =Convert.ToInt32(Console.ReadLine());
+int[] z=new int[n];
+Console.WriteLine("Introduceti cifrelel vectorului:");
+for (int i = 0; i < n; i++)
+{
+    z[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+int cmmdc = z[0];
+for(int i=0; i < n; i++)
+{
+    int a = cmmdc;
+    int b = z[i];
+
+    while (b != 0)
+    {
+        int rest = a % b;
+        a=b;
+        b = rest;
+    }
+    cmmdc = a;
+}
+Console.WriteLine($"Cel mai mare divizor comun al acestui sir este {cmmdc}");
+*/
+
+
+/*17)
+char[] allCaractere = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+Console.WriteLine("introduceti numarul in baza 10:");
+long num=Convert.ToInt64(Console.ReadLine());
+Console.WriteLine("Introduceti baza b (1<b<17)");
+int baza = Convert.ToInt32(Console.ReadLine());
+if (baza > 16)
+{
+    Console.WriteLine("Baza este prea mare");
+    return;
+}
+else if (baza == 0)
+{
+    Console.WriteLine("rezultatul 0");
+    return;
+}
+
+    char[] rezultat = new char[64];
+int pozitie = 0;
+
+while (num > 0)
+{
+    long rest=num%baza;
+    num=num/baza;
+    rezultat[pozitie]=allCaractere[rest];
+    pozitie++;
+}
+
+for(int i = pozitie; i >= 0; i--)
+{
+    Console.Write(rezultat[i]);
+}*/
+
+
+/*18)
+Console.WriteLine("De ce grad sa fie polinomul?");
+int grad = Convert.ToInt32(Console.ReadLine());
+
+int[] pol = new int[grad+1];
+Console.WriteLine("Scrie coeficientii polinomului:");
+for (int i =0; i<pol.Length;i++)
+{
+    pol[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+Console.WriteLine("Dati valaorea lui X");
+int x=Convert.ToInt32(Console.ReadLine());
+
+double valoare = 0;
+for (int i = 0; i < pol.Length; i++)
+{
+    double puterex = pol.Length-1- i;
+    valoare += pol[i]*Math.Pow(x,puterex);
+}
+
+Console.WriteLine($"Valoarea polinomului in punctul {x} este {valoare}");*/
+
+
+/*19)
+Console.WriteLine("Cate elemnte sa aiba primul vector: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+string[] z1 = new string[n1];
+
+for (int i = 0; i < z1.Length; i++)
+{
+    z1[i] = Console.ReadLine();
+}
+Console.WriteLine("Cate elemnte sa aiba al doilea vector: ");
+int n2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+string[] z2 = new string[n2];
+
+for (int i = 0; i < z2.Length; i++)
+{
+    z2[i] = Console.ReadLine();
+}
+
+Console.WriteLine();
+int repetat = 0;
+int nroirexect = n1 - (n2 - 1);
+for (int i = 0;i < nroirexect; i++)
+{
+    bool potrivire = true;
+    for (int j=0; j < n2; j++)
+    {
+        if (z1[i + j] != z2[j])
+        {
+            potrivire=false;
+            break;
+        }
+    }
+    if (potrivire==true)
+    {
+        repetat++;
+    }
+
+}
+
+Console.WriteLine($"A doua secventa se reptea in prima de {repetat} ori");*/
+
+/*20)
+Console.WriteLine("Cat de mare sa fie sirgul 1?");
+int n = Convert.ToInt32(Console.ReadLine());
+Random r= new Random();
+Console.WriteLine("Cat de mare sa fie sirgul 2?");
+int n2 = Convert.ToInt32(Console.ReadLine());
+
+int max=int.Max(n,n2);
+int min=int.Min(n,n2);
+string[] sir1=new string[max];
+for(int i=0; i<max; i++)
+{
+   int rand= r.Next(0,2);
+   if (rand == 0)sir1[i]= "Alb";
+   else sir1[i] = "Negru";
+}
+for (int i=0; i < max; i++)
+{
+   Console.Write(sir1[i]+" ");
+}
+
+Console.WriteLine();
+
+string[] sir2 = new string[min];
+for (int i = 0; i < min; i++)
+{
+   int rand = r.Next(0, 2);
+   if (rand == 0)sir2[i] = "Alb";
+
+   else sir2[i] = "Negru";
+
+}
+for (int i = 0; i < min; i++)
+{
+   Console.Write(sir2[i] + " ");
+}
+int asemmax = 0;
+for (int i = 0; i < max; i++)
+{
+   int asemene = 0;
+   for (int j = 0; j < min; j++)
+   {
+       if (sir1[(i + j)%max] == sir2[j])
+       {
+           asemene++;
+       }  
+   }
+   if (asemmax < asemene)
+   {
+       asemmax = asemene;
+   }
+}
+
+Console.WriteLine();
+Console.WriteLine($"Margelele sirurilor se portrivesc unele cu altele de {asemmax}");*/
+
+
+/*21)
+Console.WriteLine("Cate cuvinte sa aiba primul vector?");
+int n1 = Convert.ToInt32(Console.ReadLine());
+string[] v1 = new string[n1];
+for (int i = 0; i < v1.Length; i++)
+{
+    Console.WriteLine("Introduceti cuvantul");
+    string y = Console.ReadLine();
+    v1[i] = y;
+}
+Console.WriteLine("Cate cuvinte sa aiba al doilea vector?");
+int n2 = Convert.ToInt32(Console.ReadLine());
+string[] v2 = new string[n1];
+for (int i = 0; i < v2.Length; i++)
+{
+    Console.WriteLine("Introduceti cuvantul");
+    string z = Console.ReadLine();
+    v2[i] = z;
+}
+int poz = 0;
+while (true)
+{
+    int valComp = string.Compare(v1[poz], v2[poz]);
+    Console.WriteLine(valComp);
+    poz++;
+    if (valComp == -1)
+    {
+        Console.WriteLine("Primul vector apare primul in dictionar.");
+        break;
+    }
+    else if (valComp == 1)
+    {
+        Console.WriteLine("Al doilea vector apare primul in dictionar.");
+        break;
+    }
+}*/
+
+/*22)
+Console.WriteLine("Cate elemnte sa aiba primul vector: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[] v1 = new int[n1];
+
+for (int i = 0; i < v1.Length; i++)
+{
+    v1[i] = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine("Cate elemnte sa aiba al doilea vector: ");
+int n2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[] v2 = new int[n2];
+
+for (int i = 0; i < v2.Length; i++)
+{
+    v2[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+
+
+Console.Write("Intersectie:  ");
+
+for (int i = 0; i < n1; i++)
+{
+    for (int j = 0; j < n2; j++)
+    {
+        if (v1[i] == v2[j])
+        {
+            Console.Write(v2[j] + ",");
+        }
+    }
+}
+
+Console.WriteLine();
+Console.Write("Reuniune:  ");
+int k = 0;
+int comb = n1 + n2;
+int[] reun = new int[comb];
+for(int i = 0; i < n1; i++)
+{
+    reun[k]=v1[i];
+    k++;
+}
+
+for (int i = 0; i < n2; i++)
+{
+    bool exist=false;
+    for (int j = 0;j < n1; j++)
+    {
+        if (v2[i] == v1[j])
+        {
+            exist = true;
+            break;
+        }
+    }
+    if (exist == false)
+    {
+        reun[k]=v2[i];
+        k++;
+    }
+}
+for (int i = 0; i < k; i++)
+{
+    Console.Write(reun[i] + ",");
+}
+
+Console.WriteLine();
+Console.Write("Diferenta dintre primul vecotr si vectorul doi (v1-v2):  ");
+for (int i = 0; i < n1; i++)
+{
+    bool gasit = false;
+    for (int j = 0; j < n2; j++)
+    {
+        if (v1[i] == v2[j])
+        {
+            gasit = true;
+            break;
+        }
+    }
+    if (gasit == false)
+    {
+        Console.Write(v1[i] + ", ");
+    }
+}
+
+Console.WriteLine();
+Console.Write("Diferenta dintre al doilea vector si primul vectore (v2-v1):  ");
+for (int i = 0;i<n2 ; i++)
+{
+    bool gasit = false;
+    for (int j = 0; j < n1; j++)
+    {
+        if (v2[i] == v1[j]){
+            gasit = true;
+            break;
+        }
+    }
+    if (gasit == false)
+    {
+        Console.Write(v2[i] + ", ");
+    }
+}*/
+
+
+/*23)
+Console.WriteLine("Cate elemente sa aiba primul vector: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii in ordine strict crescatoare:");
+int[] v1 = new int[n1];
+
+for (int i = 0; i < v1.Length; i++)
+{
+    v1[i] = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine("Cate elemente sa aiba al doilea vector: ");
+int n2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii in ordine strict crescatoare:");
+int[] v2 = new int[n2];
+
+for (int i = 0; i < v2.Length; i++)
+{
+    v2[i] = Convert.ToInt32(Console.ReadLine());
+}
+int a1 = 0;
+int b1 = 0;
+int k1 = 0;
+
+Console.Write("Intersectie:  ");
+int[] inters = new int[Math.Min(n1, n2)];
+while(a1<n1 && b1< n2)
+{
+    if (v1[a1] < v2[b1])
+    {
+        a1++;
+    }
+    else if (v1[a1] > v2[b1])
+    {
+        b1++;
+    }
+    else
+    {
+        inters[k1] = v1[a1];
+        a1++; b1++; k1++;
+    }
+}
+
+for(int i = 0; i < k1; i++)
+{
+    Console.Write(inters[i]+",");
+}
+
+int a2 = 0;
+int b2 = 0;
+int k2 = 0;
+Console.WriteLine();
+Console.Write("Reuniune:  ");
+int comb = n1 + n2;
+int[] reun = new int[comb];
+while(a2<n1 && b2 < n2)
+{
+    if (v1[a2] < v2[b2])
+    {
+        reun[k2] = v1[a2];
+        a2++; k2++;
+    }
+    else if(v1[a2] > v2[b2])
+    {
+        reun[k2] = v2[b2];
+        b2++; k2++;
+    }
+    else
+    {
+        reun[k2]=v1[a2];
+        a2++; k2++; b2++;
+    }
+}
+while (a2 < n1)
+    {
+        reun[k2] = v1[a2];
+        a2++; k2++;
+    }
+    while(b2 < n2)
+    {
+        reun[k2]= v2[b2];
+        b2++; k2++;
+    }
+for (int i=0;i<k2;i++){
+    Console.Write(reun[i]+",");
+}
+
+int a3 = 0;
+int b3 = 0;
+int k3 = 0;
+Console.WriteLine();
+Console.Write("Diferenta dintre primul vecotr si vectorul doi (v1-v2):  ");
+int[] difv1 = new int[n1];
+while (a3 < n1 && b3 < n2)
+{
+    if (v1[a3] == v2[b3])
+    {
+        a3++;
+        b3++;
+    }
+    else if (v1[a3] < v2[b3])
+    {
+        difv1[k3] = v1[a3];
+        a3++; k3++;
+    }
+    else
+    {
+        b3++;
+    }   
+}
+while (a3 < n1)
+{
+    difv1[k3] = v1[a3];
+    a3++; k3++;
+}
+for(int i = 0; i < k3; i++)
+{
+    Console.Write(difv1[i]+",");
+}
+
+
+int a4 = 0;
+int b4 = 0;
+int k4 = 0;
+Console.WriteLine();
+Console.Write("Diferenta dintre al doilea vector si primul vectore (v2-v1):  ");
+int[] difv2 = new int[n2];
+while (a4 < n1 && b4 < n2)
+{
+    if (v1[a4] == v2[b4])
+    {
+        a4++;
+        b4++;
+    }
+    else if (v1[a4] < v2[b4])
+    {
+        a4++;
+    }
+    else
+    {
+        difv2[k4] = v2[b4];
+        b4++;
+        k4++;
+    }    
+}
+
+while (b4 < n2)
+{
+    difv2[k4] = v2[b4];
+    b4++; k4++;
+}
+for (int i = 0; i < k4; i++)
+{
+    Console.Write(difv2[i] + ",");
+}*/
+
+/*24)
+Console.WriteLine("Cate elemente sa aiba primul vector: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii in ordine strict crescatoare:");
+int[] v1 = new int[n1];
+
+for (int i = 0; i < v1.Length; i++)
+{
+    v1[i] = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine("Cate elemente sa aiba al doilea vector: ");
+int n2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii in ordine strict crescatoare:");
+int[] v2 = new int[n2];
+
+for (int i = 0; i < v2.Length; i++)
+{
+    v2[i] = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine();
+Console.Write("Inteersectia in binar:  ");
+int[] inter = new int[n1 + n2];
+int a = 0;
+int b = 0;
+int k = 0;
+while (a < n1 && b < n2)
+{
+    if (v1[a] == v2[b])
+    {
+        inter[v1[a]] = 1;
+        a++;
+        b++;
+        k++;
+    }
+    else if (v1[a] < v2[b])
+    {
+        a++;
+    }
+    else
+    {
+        b++;
+    }
+}
+int val = (n1 + n2) - k;
+for (int i = 1; i <val+1; i++)
+{
+    Console.Write(inter[i] +",");
+}
+
+Console.WriteLine();
+Console.Write("Reuniune:   ");
+int[] reun=new int[n1 + n2];
+int a2 = 0;
+int b2 = 0;
+int k2 = 0;
+while(a2 < n1 && b2 < n2)
+{
+    if (v1[a2] == v2[b2])
+    {
+        reun[k2] = 1;
+        b2++; a2++;k2++;
+    }
+    else if (v1[a2] < v2[b2])
+    {
+        reun[k2] = 1;
+        a2++; k2++;
+        
+    }
+    else 
+    {
+        reun[k2] = 1;
+        b2++; k2++; 
+    }
+}
+while (a2 < n1)
+{
+    reun[k2] = 1;
+    a2++;k2++;
+}
+while (b2 < n2)
+{
+    reun[k2] = 1;
+    b2++; k2++;
+}
+for (int i = 0; i < k2; i++)
+{
+    Console.Write(reun[i]+",");
+}
+Console.WriteLine();
+Console.Write("Diferenta dintre primul vecotr si vectorul doi (v1-v2):  ");
+int[] difv1 = new int[n1];
+int a3 = 0;
+int b3 = 0;
+int k3 = 0;
+while(a3 < n1 && b3 < n2)
+{
+    if (v1[a3] == v2[b3])
+    {
+        a3++;
+        b3++;
+    }
+    else if (v1[a3] < v2[b3])
+    {
+        difv1[k3] = 1;
+        a3++; k3++;
+    }
+    else
+    {
+        b3++;
+    } 
+}
+while (a3 < n1)
+{
+    difv1[k3]= 1;
+    a3++;k3++;
+}
+for (int i = 0; i < n1; i++)
+{
+    Console.Write(difv1[i] + ",");
+}
+Console.WriteLine();
+Console.Write("Diferenta dintre primul vecotr si vectorul doi (v2-v1):  ");
+int[] difv2 = new int[n2];
+int a4 = 0;
+int b4 = 0;
+while (a4 < n1 && b4 < n2)
+{
+    if (v1[a4] == v2[b4])
+    {
+        a4++;
+        b4++;
+    }
+    else if (v2[b4] < v1[a4])
+    {
+        difv2[b4] = 1;
+        b4++;
+    }
+    else
+    {
+        a4++;
+    }
+}
+while (b4 < n2)
+{
+    difv2[b4] = 1;
+    b4++;
+}
+for (int i = 0; i < n2; i++)
+{
+    Console.Write(difv2[i] + ",");
+}*/
+
+
+
+
+
+/*25)
+Console.WriteLine("Cate elemnte sa aiba primul vector: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[] z = new int[n1];
+
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+
+for (int j = 0; j < z.Length - 1; j++)
+{
+    for (int i = 0; i < z.Length - 1 - j; i++)
+    {
+        if (z[i] > z[i + 1])
+        {
+            int aux = z[i];
+            z[i] = z[i + 1];
+            z[i + 1] = aux;
+        }
+    }
+}
+
+Console.WriteLine("Cate elemnte sa aiba primul vector: ");
+int n2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[] k = new int[n2];
+
+for (int i = 0; i < k.Length; i++)
+{
+    k[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+for (int j = 0; j < k.Length - 1; j++)
+{
+    for (int i = 0; i < k.Length - 1 - j; i++)
+    {
+        if (k[i] > k[i + 1])
+        {
+            int aux = k[i];
+            k[i] = k[i + 1];
+            k[i + 1] = aux;
+        }
+    }
+}
+
+int a = 0;
+int b = 0;
+int v = 0;
+
+int distvect3 = n1 + n2;
+int[] vect3 = new int[distvect3];
+
+while(a<n1 && b < n2)
+{
+    if (z[a] < k[b])
+    {
+        vect3[v]=z[a];
+        a++;
+    }
+    else
+    {
+        vect3[v]=k[b];
+        b++;
+        
+    }
+    v++;
+}
+while (a < n1)
+{
+    vect3[v] = z[a];
+    v++;
+    a++;
+}
+while(b < n2)
+{
+    vect3[v] = k[b];
+    v++;
+    b++;
+}
+
+for(int i = 0; i < vect3.Length; i++)
+{
+    Console.WriteLine(vect3[i]);
+}*/
+
+/*26)
+class Program
+{
+    static void Main()
+    {
+
+        Console.Write("Numar 1: ");
+        string s1 = Console.ReadLine();
+        Console.Write("Numar 2: ");
+        string s2 = Console.ReadLine();
+
+        List<int> n1 = StringToVector(s1);
+        List<int> n2 = StringToVector(s2);
+
+        List<int> suma = Adunare(n1, n2);
+        Console.Write("Suma: ");
+        AfisareVector(suma);
+
+        List<int> dif = Scadere(n1, n2);
+        Console.Write("Diferenta: ");
+        AfisareVector(dif);
+
+        List<int> prod = Inmultire(n1, n2);
+        Console.Write("Produs: ");
+        AfisareVector(prod);
+    }
+    static List<int> StringToVector(string s)
+    {
+        List<int> v = new List<int>();
+        for (int i = s.Length - 1; i >= 0; i--) 
+        {
+            v.Add(s[i] - '0');
+        }
+        return v;
+    }
+    static void AfisareVector(List<int> v)
+    {
+        if (v.Count == 0) { Console.WriteLine("0"); return; }
+        for (int i = v.Count - 1; i >= 0; i--)
+        {
+            Console.Write(v[i]);
+        }
+        Console.WriteLine();
+    }
+    static List<int> Adunare(List<int> a, List<int> b)
+    {
+        List<int> rez = new List<int>();
+        int i = 0, j = 0, transport = 0;
+
+        while (i < a.Count || j < b.Count || transport > 0)
+        {
+            int cifraA = (i < a.Count) ? a[i] : 0;
+            int cifraB = (j < b.Count) ? b[j] : 0;
+
+            int suma = cifraA + cifraB + transport;
+
+            rez.Add(suma % 10);
+            transport = suma / 10;
+            i++; j++;
+        }
+        return rez;
+    }
+    static List<int> Scadere(List<int> a, List<int> b)
+    {
+        List<int> rez = new List<int>();
+        int imprumut = 0;
+
+        for (int i = 0; i < a.Count; i++)
+        {
+            int cifraA = a[i];
+            int cifraB = (i < b.Count) ? b[i] : 0;
+
+            int dif = cifraA - cifraB - imprumut;
+
+            if (dif < 0)
+            {
+                dif += 10; 
+                imprumut = 1;
+            }
+            else
+            {
+                imprumut = 0;
+            }
+
+            rez.Add(dif);
+        }
+        while (rez.Count > 1 && rez[rez.Count - 1] == 0)
+        {
+            rez.RemoveAt(rez.Count - 1);
+        }
+
+        return rez;
+    }
+    static List<int> Inmultire(List<int> a, List<int> b)
+    {
+        if ((a.Count == 1 && a[0] == 0) || (b.Count == 1 && b[0] == 0))
+            return new List<int> { 0 };
+
+        int lungimeMax = a.Count + b.Count;
+        int[] tempRez = new int[lungimeMax];
+
+        for (int i = 0; i < a.Count; i++)
+        {
+            for (int j = 0; j < b.Count; j++)
+            {
+                int produs = a[i] * b[j];
+                tempRez[i + j] += produs;
+
+                if (tempRez[i + j] >= 10)
+                {
+                    tempRez[i + j + 1] += tempRez[i + j] / 10;
+                    tempRez[i + j] %= 10;
+                }
+            }
+        }
+
+        List<int> rez = tempRez.ToList();
+        while (rez.Count > 1 && rez[rez.Count - 1] == 0)
+        {
+            rez.RemoveAt(rez.Count - 1);
+        }
+
+        return rez;
+    }
+}*/
+
+/*27)
+Console.WriteLine("Cate elemnte sa aiba primul vector: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("introduceti vectorii:");
+int[] z = new int[n1];
+
+for (int i = 0; i < z.Length; i++)
+{
+    z[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+Console.WriteLine("Da indexul");
+int index = Convert.ToInt32(Console.ReadLine());
+for(int i = 0; i < z.Length-1; i++)
+{
+    for(int j = 0; j < z.Length-1-i; j++)
+    {
+        if (z[j] > z[j+1])
+        {
+            int temp = z[j];
+            z[j] = z[j+1];
+            z[j + 1] = temp;
+        }
+    }
+}
+
+Console.WriteLine($"Dupa sortare valoarea vectorului de pe pozita {index} este {z[index]}");
+*/
+
+
+/*28)
+class QuickSort{ 
+static int partitei(int[] arr, int min, int max)
+{
+    int pivot = max;
+    int i = min - 1;
+    for (int j = min; j < max; j++)
+    {
+        if (arr[j]<pivot)
+        {
+            i++;
+            swap(arr, i, j);
+        }
+    }
+    swap(arr, i + 1, max);
+    return i + 1;
+}
+static void swap(int[] arr ,int i,int j)
+{
+    int tempor = arr[i];
+    arr[i]=arr[j];
+    arr[j]=tempor;
+}
+
+static void quicksort(int[] arr, int min, int max)
+{
+    
+    if (min < max)
+    {
+        int pi=partitei(arr, min, max);
+        quicksort(arr, min, pi - 1);
+        quicksort(arr, pi + 1, max);
+    }
+}
+static void Main(string[] args)
+{
+        Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+        int n= Convert.ToInt32(Console.ReadLine());
+        int[] arr = new int[n];
+        Console.WriteLine("introduceti vectorii:");
+        for ( int i = 0; i < arr.Length; i++)
+        {
+            arr[i]=Convert.ToInt32(Console.ReadLine());
+        }
+
+        quicksort(arr, 0, n - 1);
+        Console.WriteLine("Vectorul sortat este:");
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Console.WriteLine(arr[i]);
+        }    
+}
+}*/
+
+
+/*29)
+class MergeSort
+{
+    static void merge(int[] vect, int s, int d, int m)
+    {
+        int n1 = m - s + 1;
+        int n2 = d - m;
+        int[] stanga = new int[n1];
+        int[] dreapta = new int[n2];
+        int i, j;
+        for (i = 0; i < n1; i++)
+        {
+            stanga[i] = vect[i];
+        }
+        for (j = 0; j < n2; j++)
+        {
+            dreapta[j] = vect[m + 1 + j];
+        }
+
+        i = 0; j = 0;
+        int k = 0;
+        while (i < n1 && j < n2)
+        {
+            if (stanga[i] < dreapta[j])
+            {
+                vect[k] = stanga[i];
+                i++; k++;
+            }
+            else
+            {
+                vect[k] = dreapta[j];
+                j++; k++;
+            }
+        }
+        while (i < n1)
+        {
+            vect[k] = stanga[i];
+            i++; k++;
+        }
+        while (j < n2)
+        {
+            vect[k] = dreapta[j];
+            j++; k++;
+        }
+    }
+    static void mergeSort(int[] vect, int s, int d)
+    {
+        if (s < d)
+        {
+            int m = s + (d - s) / 2;
+            mergeSort(vect, s, m);
+            mergeSort(vect, m + 1, d);
+            merge(vect, s, d, m);
+        }
+    }
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Cate elemnte sa aiba vectorul: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[] vect = new int[n];
+        Console.WriteLine("introduceti vectorii:");
+        for (int i = 0; i < vect.Length; i++)
+        {
+            vect[i] = Convert.ToInt32(Console.ReadLine());
+        }
+        mergeSort(vect, 0, n - 1);
+        Console.WriteLine("Vectorul sortat este:");
+        for (int i = 0; i < vect.Length; i++)
+        {
+            Console.WriteLine(vect[i]);
+        }
+    }
+}*/
+
+/*30)
+Console.Write("Introduceti numarul de elemente (n): ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] E = new int[n];
+int[] W = new int[n];
+Console.WriteLine("\nIntroduceti datele pentru fiecare element:");
+for (int i = 0; i < n; i++)
+{
+Console.Write($"Valoare E[{i}]: ");
+E[i] = Convert.ToInt32(Console.ReadLine());
+Console.Write($"Pondere W[{i}]: ");
+W[i] = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+}
+
+for (int i = 0; i < n - 1; i++)
+        {
+    for (int j = i + 1; j < n; j++)
+    {
+        bool trebuieSchimbat = false;
+
+        if (E[i] > E[j])
+        {
+            trebuieSchimbat = true;
+        }
+
+        else if (E[i] == E[j])
+        {
+
+            if (W[i] < W[j])
+            {
+                trebuieSchimbat = true;
+            }
+        }
+
+        if (trebuieSchimbat)
+        {
+            int tempE = E[i];
+            E[i] = E[j];
+            E[j] = tempE;
+            int tempW = W[i];
+            W[i] = W[j];
+            W[j] = tempW;
+        }
+    }
+}       
+Console.WriteLine("\nVectorii sortati (E crescator / W descrescator):");
+Console.WriteLine("Poz\tE\tW");
+
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"{i}\t{E[i]}\t{W[i]}");
+}
+Console.ReadLine();*/
+
+/*31)
+Console.Write("Introduceti numarul de elemente (n): ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int[] vector = new int[n];
+
+Console.WriteLine("Introduceti elementele vectorului:");
+for (int i = 0; i < n; i++)
+{
+    Console.Write($"Elementul {i}: ");
+    vector[i] = Convert.ToInt32(Console.ReadLine());
+}
+int candidat = 0;
+int contor = 0;
+
+foreach (int numar in vector)
+{
+    if (contor == 0)
+    {
+        candidat = numar;
+        contor = 1;
+    }
+    else
+    {
+        if (numar == candidat)
+            contor++;
+        else
+            contor--;
+    }
+}
+int aparitiiReale = 0;
+for (int i = 0; i < n; i++)
+{
+    if (vector[i] == candidat)
+    {
+        aparitiiReale++;
+    }
+}
+Console.WriteLine("\nRezultat:");
+
+if (aparitiiReale > n / 2)
+{
+    Console.WriteLine($"Elementul majoritate este: {candidat}");
+}
+else
+{
+    Console.WriteLine("<nu exista>");
+}
+Console.ReadLine();*/
