@@ -1,0 +1,399 @@
+
+/*1)
+ * Console.WriteLine("Ecuatia de gradul 1: ax + b = 0");
+Console.Write("Introduceti coeficientul a: ");
+ double a = Convert.ToDouble(Console.ReadLine());
+ Console.Write("Introduceti coeficientul b: ");
+ double b = Convert.ToDouble(Console.ReadLine());
+
+if (a == 0)
+{
+    Console.WriteLine("Ecuatia nu are solutii reale deoarece a=0");
+}
+
+
+ else if (b < 0)
+ {
+     Console.WriteLine($"Avem ecutaia de forma {a}x+({b})=0");
+     Console.WriteLine("Terbuie sa aflam valoarea lui x");
+
+     double x = -b / a;
+
+     Console.WriteLine("Necunoacuta ecuatie x este nr " + x);
+ }
+ else
+ {
+     Console.WriteLine($"Avem ecutaia de forma {a}x+{b}=0");
+     Console.WriteLine("Terbuie sa aflam valoarea lui x");
+     double x = -b / a;
+     Console.WriteLine("Necunoacuta ecuatie x este nr " + x);
+ }*/
+
+
+
+/*2)
+Console.WriteLine("Ecuatia de gradul 2: ax^2 + bx + c = 0");
+Console.Write("Introduceti coeficientul a: ");
+double a = Convert.ToDouble(Console.ReadLine());
+Console.Write("Introduceti coeficientul b: ");
+double b = Convert.ToDouble(Console.ReadLine());
+Console.Write("Introduceti coeficientul c: ");
+double c = Convert.ToDouble(Console.ReadLine());
+
+double delta = b*b - 4 * a *c;
+if (delta > 0)
+{
+    double x1 = (-b + Math.Sqrt(delta)) / (2 * a);
+    double x2 = (-b - Math.Sqrt(delta)) / (2 * a);
+    Console.WriteLine($"Ecutatia data are solutiile x1 = {x1} si x2 = {x2}");
+}
+else if (delta == 0)
+{
+    double x = -b / (2 * a);
+    Console.WriteLine($"Ecuatia are o singura solutie reala care este {x}");
+}
+else
+{
+    Console.WriteLine("Ecuatia nu are solutii reale.");
+}*/
+
+
+/*3)
+Console.WriteLine("Verificare divizibilitate n cu k");
+Console.Write("Introduceti n: ");
+double n = Convert.ToDouble(Console.ReadLine());
+Console.Write("Introduceti k: ");
+double k = Convert.ToDouble(Console.ReadLine());
+if (n % k == 0)
+{
+    Console.WriteLine($"{n} este divizibil cu {k}");
+}
+else
+{
+    Console.WriteLine($"{n} nu se divide cu {k}");
+}
+
+/*4)
+Console.WriteLine("Ce an sa verificam?");
+ int an = Convert.ToInt32(Console.ReadLine());
+if (an % 4 == 0 && !(an % 100 == 0) || an % 400 == 0)
+{
+    Console.WriteLine($"{an} este an bisect");
+}
+else {
+    Console.WriteLine("Anul nu este bisesct");
+}*/
+
+/*5)
+Console.WriteLine("Scireti numarul: ");
+string z = Console.ReadLine();
+
+int ultimNr = z.Length - 1;
+
+Console.WriteLine($"Ultima cifra a numarului este {z[ultimNr]}")*/
+
+
+/*6)
+Console.WriteLine("Dati latura A a triunghiului");
+double a = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Dati latura B a triunghiului");
+double b = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Dati latura C a triunghiului");
+double c = Convert.ToDouble(Console.ReadLine());
+
+if(a+b>c && a+c>b && c + b > a)
+{
+    Console.WriteLine($"Laturiel {a} {b} si {c} pot forma un triunghi");
+}
+else
+{
+    Console.WriteLine($"Laturile {a} {b} si {c} nu pot forma un triunghi");
+}*/
+
+/*7)
+Console.WriteLine("Introduceti primul numar: ");
+int z = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Introduceti al doilea numar: ");
+int x=Convert.ToInt32(Console.ReadLine());
+
+int swap = z;
+
+z = x;
+x=swap;
+
+Console.WriteLine($"Numerel inversate sunt primul {z} si al doilea {x}");*/
+
+/*8)
+Console.WriteLine("Introduceti primul numar: ");
+int z = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Introduceti al doilea numar: ");
+int x = Convert.ToInt32(Console.ReadLine());
+
+z = z+x;
+x = z - x;
+z=z - x;
+Console.WriteLine($"Numerel inversate sunt primul {z} si al doilea {x}");*/
+
+
+/*9)
+Console.WriteLine("Introduceti un numar:");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Divizorii numarului {n} sunt: ");
+for (int i = 1; i <= n; i++)
+{
+    if( n % i == 0) 
+    {
+        Console.WriteLine(i);
+    }
+
+}*/
+
+/*
+Console.WriteLine("Introduceti un numar:");
+int n = Convert.ToInt32(Console.ReadLine());
+for(int i=1; i<=100; i += 2)
+{
+    Console.WriteLine(i);
+}*/
+
+/*10)
+Console.WriteLine("Scrieti un numar pentru al verifica daaca este prim: ");
+int z=Convert.ToInt32(Console.ReadLine());
+if (z%2==0 || z%3==0 || z % 5 == 0)
+{
+    Console.WriteLine($"Numarul {z} nu este numar prim.");
+}
+else
+{
+    Console.WriteLine($"Numarul {z} este prim");
+}*/
+
+/*11)
+Console.WriteLine("Scireti numarul: ");
+string z = Console.ReadLine();
+Console.WriteLine("Numarul de mai sus inversat este:");
+for (int i = z.Length - 1; i > -1; i--)
+{
+    Console.Write(z[i]);
+}
+*/
+/*12)
+Console.WriteLine("Dati numarul care ar trebui sa afalm cate numere divizibile sunt cu el: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Introudcti inceputul inervalului: ");
+int a= Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Introduceti finalul intervalului: ");
+int b= Convert.ToInt32(Console.ReadLine());
+
+int z = b / n - (a - 1) / n;
+Console.WriteLine($"Intre intervalul {a} si {b} sunt {z} numere divizibile cu {n}");*/
+
+/*13)
+Console.WriteLine("Dati intervalul de ani :");
+Console.WriteLine("Incepand cu anul: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Pana la anul: ");
+int b = Convert.ToInt32(Console.ReadLine());
+int nr = 1;
+for (int i=a; i<=b; i++)
+{
+    if(i%4==0 && i%100!=0 || i % 400 == 0)
+    {
+        Console.WriteLine($"{nr}. {i}");
+        nr++;
+    }
+}*/
+
+/*14)
+Console.WriteLine("Scireti numarul: ");
+string z = Console.ReadLine();
+Console.WriteLine("Numarul de mai sus inversat este:");
+string inversz= "";
+
+for (int i = z.Length - 1; i >=0; i--)
+{
+    Console.Write(z[i]);
+}
+
+Console.WriteLine();
+
+for (int i = z.Length - 1;i>=0 ; i--)
+{
+    inversz += z[i];
+}
+
+if (z == inversz)
+{
+    Console.WriteLine($"Nuamrul {z} este palindrom");
+}
+else
+{
+    Console.WriteLine($"Nuamrul {z} nu este palindrom");
+}*/
+
+/*15)
+
+Console.WriteLine("Dati cele 3 numere:");
+int z = Convert.ToInt32(Console.ReadLine());
+int x = Convert.ToInt32(Console.ReadLine());
+int c = Convert.ToInt32(Console.ReadLine());
+
+
+ if (x < z && x < c && z < c)
+ {
+     Console.WriteLine($"Numerle vor fi in oridinea: {x}, {z}, {c}");
+ }
+ else if (x < z && x < c && c < z)
+ {
+    Console.WriteLine($"Numerle vor fi in oridinea: {x}, {c}, {z}");
+ }
+ else if (z < x && z < c && x < c)
+ {
+     Console.WriteLine($"Numerle vor fi in oridinea: {z}, {x}, {c}");
+ }
+ else if (z < x && z< c && c < x)
+ {
+     Console.WriteLine($"Numerle vor fi in oridinea: {z}, {c}, {x}");
+ }
+ else if (c < x && c < z && x < z)
+ {
+    Console.WriteLine($"Numerle vor fi in oridinea: {c}, {x}, {z}");
+ }
+ else 
+ {
+    Console.WriteLine($"Numerle vor fi in oridinea: {c}, {z}, {x}");
+ }*/
+
+/*16)
+Console.WriteLine("Dati 5 numere de la tastatura:");
+int z = int.Parse(Console.ReadLine());
+int x = int.Parse(Console.ReadLine());
+int c = int.Parse(Console.ReadLine());
+int v = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
+
+if (z > x) { int t = z; z = x; x = t; }
+if (z > c) { int t = z; z = c; c = t; }
+if (z > v) { int t = z; z = v; v = t; }
+if (z > b) { int t = z; z = b; b = t; }
+
+if (x > c) { int t = x; x = c; c = t; }
+if (x > v) { int t = x; x = v; v = t; }
+if (x > b) { int t = x; x = b; b = t; }
+
+if (c > v) { int t = c; c = v; v = t; }
+if (c > b) { int t = c; c = b; b = t; }
+
+if (v > b) { int t = v; v = b; b = t; }
+
+Console.WriteLine($"Numerele vor fi in oridnea: {z}, {x}, {c}, {v}, {b}");*/
+
+/*17)
+Console.WriteLine("Dati doua numere:");
+int a = Convert.ToInt32(Console.ReadLine());
+int b = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Cel mai mare divizor comun al numerelor {a} si {b} este {cmmdc(a,b)} si cel mai mic multiplu comun este {cmmmc(a,b)}");
+static long cmmdc(long prim, long doi)
+{
+    while (doi != 0)
+    {
+        long restul = prim % doi;
+        prim = doi;
+        doi = restul;
+    }
+    return prim;
+}
+static long cmmmc(int primul , int doilea)
+{
+    long rezulat=(primul * doilea)/ cmmdc(primul, doilea);
+    return rezulat;
+}*/
+
+/*18)
+Console.WriteLine("Dati un numar pentru ai afla divizorii.");
+int n=Convert.ToInt32(Console.ReadLine());
+
+for (int i=2; i*i<=n; i++)
+{
+    int put = 0;
+    while (n % i == 0)
+    {
+        put++;
+        n = n / i;
+    }
+    if (put>0)
+    {
+        Console.WriteLine($"{i}^{put}");
+    }
+}
+if (n>0)
+{
+    Console.WriteLine($"{n}^1");
+}*/
+
+/*19)
+Console.WriteLine("Dati cifra la verificare:");
+int z=Convert.ToInt32(Console.ReadLine());
+int primtip = -1;
+int doitip = -1;
+bool gasit=true;
+while (z > 0)
+{
+    int tip = z % 10;
+    z=z/10;
+    if (primtip==-1)
+    {
+        primtip = tip;
+    }
+    else if (doitip==-1 && tip!=primtip)
+    {
+        doitip = tip;
+    }
+    else if(tip != primtip && tip != doitip)
+    {
+        gasit = false;
+        Console.WriteLine("Numarul nu este format din 2 cifre care se repeta.");
+        break;
+    }
+}
+if (gasit)
+{
+    Console.WriteLine("Numarul este format din 2 cifre care se repeta.");
+}*/
+
+/*20)
+Console.WriteLine("Dati cele doua numere pentru a calcula impartirea lor.");
+int m = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
+
+int intreg = m / n;
+double rest = m % n;
+rest = (rest * 10) / n;
+
+
+Console.WriteLine($"{m}/{n}={intreg}  {rest}");
+*/
+
+/*21)
+int min = 1;
+int max = 1024;
+int incercari = 0;
+int intrebari = 0;
+while (min<= max)
+{
+    int x = (min + max) / 2;
+    Console.WriteLine($"Numarul este mai mare ca {x} ? d/n ");
+    string dsin=Console.ReadLine();
+    intrebari++;
+    if (dsin == "d")
+    {
+        min = x+1;
+    }
+    else
+    {
+        max=x-1;
+    }
+}
+
+Console.WriteLine($"Numarul tau este {min} ghicit din {intrebari} intrebari");*/
